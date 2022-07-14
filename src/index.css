@@ -1,0 +1,199 @@
+@font-face {
+  font-family: "Graphik";
+  src: url("fonts/graphik/GraphikRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("fonts/graphik/GraphikSemibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("fonts/graphik/GraphikBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+  font-family: "Macondo";
+  src: url("fonts/macondo/Macondo-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("fonts/nunito/NunitoSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("fonts/nunito/NunitoSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+    font-display: block;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #e44232;
+  --color-primary-lighter: #e64535;
+  --color-primary-lightest: #f1a098;
+  --color-primary-darker: #c53727;
+  --color-background-light: #f4f4f2;
+  --color-body: #1f1f1f;
+  --color-inputs: #212529;
+  --color-links: #575757;
+  --color-links-light: #6C777A;
+  --color-accent: #ffffaa;
+}
+
+body {
+  color: var(--color-body);
+  margin: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+::selection {
+  background: var(--color-accent);
+}
+
+a {
+  color: var(--color-links);
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+  background: grey;
+  margin-bottom: 30px;
+}
+
+/* typography */
+.my-name {
+  color: var(--color-primary);
+}
+
+
+
+/* images */
+.logoName {
+  width: 127px;
+  height: 32px;
+}
+
+.brand {
+  width: 127px;
+  height: 32px;
+}
+
+@media (max-width: 900px) { 
+  .brand {
+    width: 32px;
+    height: 32px;
+  }
+ }
+
+.ela {
+  width: 200px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+@media (min-width: 600px) { 
+  .ela {
+    border: 0;
+    border-radius: 20px;
+    width: 75%;
+    filter: none;
+  }
+ }
+
+@media (min-width: 768px) { 
+  .ela {
+    border: 0;
+    border-radius: 20px;
+    width: 75%;
+    filter: none;
+  }
+ }
+
+@media (min-width: 820px) { 
+  .ela {
+    text-align: center;
+    width: 40%;
+  }
+ }
+
+/* blocks */
+/* +100 */
+.block--skewed-left {
+  width: 100%;
+  --skewed-block-height: 340px;
+  height: var(--skewed-block-height);
+  position: relative;
+  z-index: 0;
+}
+
+.block--skewed-left::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-primary-lightest);
+  clip-path: polygon(100% 0, 100% 100%, 16% 100%);
+}
+
+@media (min-width: 600px) { 
+  .block--skewed-left {
+    height: calc(var(--skewed-block-height) + 100px);;
+  }
+
+  .block--skewed-left::before {
+  
+    clip-path: polygon(100% 0, 100% 100%, 15% 100%);
+  }
+ }
+
+
+
+
